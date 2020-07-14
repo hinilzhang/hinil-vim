@@ -1,6 +1,8 @@
 #!/bin/bash
 
-rm -rf $HOME/.vimrc
-rm -rf $HOME/.vim
+echo ">>>>> Uninstall Start...!"
 
-echo "Uninstall Done!"
+rm -rf ~/.vimrc
+rm -rf ~/.vim
+
+echo ">>>>> Uninstall Done!"

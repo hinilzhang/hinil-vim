@@ -1,34 +1,27 @@
 #!/bin/bash
 
-#*******************************************************
-# Install software
-sudo apt-get install vim curl 
-#*******************************************************
+HINIL_PATH=${PWD}
 
-#*******************************************************
-# Copy file
+## Install software
+echo ">>>>> Installed [vim] and [curl]"
+sudo apt-get install vim curl 
+
+## Copy file
+echo ">>>>> Copy [.vim(colors|setting|autoload)] and [.vimrc]"
+
 rm -rf ~/.vimrc
 rm -rf ~/.vim
-
 mkdir ~/.vim
-ln -s ${PWD}/colors ~/.vim
-ln -s ${PWD}/setting ~/.vim
-#ln -s ${PWD}/autoload ~/.vim
-ln -s ${PWD}/.vimrc ~ 
-#*******************************************************
+cp -r ${HINIL_PATH}/colors   ~/.vim/
+cp -r ${HINIL_PATH}/setting  ~/.vim/
+cp -r ${HINIL_PATH}/autoload ~/.vim/
+cp -r ${HINIL_PATH}/.vimrc   ~/.vimrc 
 
-#*******************************************************
-# Download vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-#*******************************************************
-
-#*******************************************************
-# Install vim 
+## Install vim 
 vim -c "PlugInstall" -c "q" -c "q"
-echo 'PluggInstalled...'
-#*******************************************************
+echo ">>>>> PluggInstalled"
 
-#*******************************************************
-# echo log
-echo 'Just enjoy it!'
-#*******************************************************
+## Finished log
+echo ">>>>> Just enjoy it"
+
+

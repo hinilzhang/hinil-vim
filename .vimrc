@@ -47,8 +47,8 @@ set nowrap                      " 禁止折行
 set backspace=indent,eol,start  " 使用回车键正常处理indent,eol,start等
 set sidescroll=10               " 设置向右滚动字符数
 set nofoldenable                " 禁用折叠代码
-set mouse=a     	            "启动对鼠标的支持
-"set mouse-=a   	            " 鼠标暂不启用, 键盘党....
+"set mouse=a     	            "启动对鼠标的支持
+set mouse-=a   	            " 鼠标暂不启用, 键盘党....
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码补全
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,8 +90,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/LeaderF'             	"文件搜索，比ctrlp更强大的文件的模糊搜索工具
 Plug 'easymotion/vim-easymotion'    	"强大的光标快速移动工具，强大到颠覆你的插件观
 Plug 'scrooloose/nerdtree'          	"目录树
-Plug 'vim-airline/vim-airline'          "状态栏增强
-Plug 'vim-airline/vim-airline-themes'   "状态栏增强
+Plug 'liuchengxu/eleline.vim'           "状态栏
 Plug 'chxuan/prepare-code'              "新建文件时，生成预定义代码片段
 Plug 'haya14busa/incsearch.vim'         "模糊字符搜索插件
 "---------------------------------------------------------------------------------------
@@ -104,8 +103,7 @@ source ~/.vim/setting/incsearch.vim
 source ~/.vim/setting/LeaderF.vim
 source ~/.vim/setting/nerdtree.vim
 source ~/.vim/setting/prepare-code.vim
-source ~/.vim/setting/vim-airline.vim
-source ~/.vim/setting/vim-easymotion.vim
+source ~/.vim/setting/eleline.vim
 
 " 安装、更新、删除插件
 nnoremap <leader><leader>s :PlugStatus<cr>
